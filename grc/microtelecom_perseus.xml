@@ -1,0 +1,60 @@
+<?xml version="1.0"?>
+<block>
+  <name>perseus</name>
+  <key>microtelecom_perseus</key>
+  <category>microtelecom</category>
+  <import>import microtelecom</import>
+  <make>microtelecom.perseus($sampling_rate, $central_frequency, $attenuation_db, $adc_dither, $preamp, $frontend_filters)
+  </make>
+  
+  <callback>set_freq($central_frequency)</callback>
+  <callback>set_attenuator($attenuation_db)</callback>
+  <callback>set_dither($adc_dither)</callback>
+  <callback>set_preamp($preamp)</callback>
+  <callback>set_wideband($frontend_filters)</callback>
+
+  <param>
+    <name>Sampling_rate</name>
+    <key>sampling_rate</key>
+    <value>96000</value>
+    <type>int</type>
+  </param>
+
+  <param>
+    <name>Central_frequency</name>
+    <key>central_frequency</key>
+    <value>7250000.0</value>
+    <type>real</type>
+  </param>
+
+  <param>
+    <name>Attenuation_db</name>
+    <key>attenuation_db</key>
+    <value>0</value>
+    <type>int</type>
+  </param>
+
+  <param>
+    <name>Adc_dither</name>
+    <key>adc_dither</key>
+    <type>raw</type>
+  </param>
+
+  <param>
+    <name>Preamp</name>
+    <key>preamp</key>
+    <type>raw</type>
+  </param>
+
+  <param>
+    <name>Frontend_filters</name>
+    <key>frontend_filters</key>
+    <type>raw</type>
+  </param>
+
+  <source>
+    <name>out</name>
+    <type>complex</type>
+  </source>
+
+</block>
