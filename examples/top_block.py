@@ -2,7 +2,7 @@
 ##################################################
 # Gnuradio Python Flow Graph
 # Title: Top Block
-# Generated: Sat Jan 17 22:32:00 2015
+# Generated: Thu Jan 29 15:58:41 2015
 ##################################################
 
 from PyQt4 import Qt
@@ -165,7 +165,7 @@ class top_block(gr.top_block, Qt.QWidget):
         self._f_knob_layout.addWidget(self._f_knob_slider)
         self.top_layout.addLayout(self._f_knob_layout)
         self.blocks_throttle_0 = blocks.throttle(gr.sizeof_gr_complex*1, samp_rate,True)
-        self.blocks_multiply_const_vxx_0 = blocks.multiply_const_vcc((500, ))
+        self.blocks_multiply_const_vxx_0 = blocks.multiply_const_vcc((100, ))
         self.blocks_complex_to_mag_0 = blocks.complex_to_mag(1)
         self.audio_sink_0 = audio.sink(samp_rate/4, "", True)
         self._attenuator_ctr_options = (0, 10, 20, 30, )
