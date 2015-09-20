@@ -161,8 +161,8 @@ namespace gr {
         perseus_set_attenuator(pd, PERSEUS_ATT_0DB);
         
         // Centre frequency
-        printf("Setting Center frequency: \n", d_central_frequency);
-        perseus_set_ddc_center_freq(pd,double(d_central_frequency),d_frontend_filters);
+        printf("Setting Center frequency: %d\n", d_central_frequency);
+        perseus_set_ddc_center_freq(pd, double(d_central_frequency), d_frontend_filters);
 
         // start the reception loop
         int bs = 6144*2;
