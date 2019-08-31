@@ -59,8 +59,7 @@ namespace gr {
        * creating new instances.
        */
 //      static sptr make(int sampling_rate = 95000, int central_frequency = 7070000, int attenuation_db = 0, bool adc_dither = 0, bool preamp = 0, bool frontend_filters = 0)
-      static sptr make(int sampling_rate, int central_frequency, int attenuation_db, bool adc_dither, bool preamp, bool frontend_filters)
-                  throw (std::runtime_error) ;
+      static sptr make(int sampling_rate, int central_frequency, int attenuation_db, bool adc_dither, bool preamp, bool frontend_filters) ;
     };
 
   } // namespace microtelecom

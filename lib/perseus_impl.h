@@ -68,7 +68,7 @@ namespace gr {
 
       // hardware data
       unsigned short d_serial_number; // product id
-      char           d_signature[7];  // product signature "0000-0000-0000"
+      char           d_signature[16]; // product signature "0000-0000-0000"
       unsigned short d_hw_release;    // hardware release
       unsigned short d_hw_version;    // hardware version
       

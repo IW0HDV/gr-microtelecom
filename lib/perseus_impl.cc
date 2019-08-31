@@ -31,7 +31,6 @@ namespace gr {
 
     perseus::sptr
     perseus::make(int sampling_rate, int central_frequency, int attenuation_db, bool adc_dither, bool preamp, bool frontend_filters)
-    throw (std::runtime_error) 
     {
         int num_perseus = perseus_init();
     
@@ -131,7 +130,7 @@ namespace gr {
 
         // Save some information about the receiver (S/N and HW rev)
         eeprom_prodid prodid; // Perseus library data structure
-        if (pd->is_preserie == TRUE)
+        if (perseus_is_preserie(pd, 0) >= 0)
             printf("The device is a preserie unit");
         else
             if (perseus_get_product_id (pd,&prodid) >= 0) {
@@ -152,7 +151,7 @@ namespace gr {
             }
 
         // Disable ADC Dither, Disable ADC Preamp
-        perseus_set_adc (pd, FALSE, FALSE);
+        perseus_set_adc (pd, false, false);
             
         // Set preselection filters (WB_MODE) and NCO frequency 
         perseus_set_ddc_center_freq (pd, d_central_frequency, 1);
