@@ -4,9 +4,9 @@
 #
 find_path(
     PERSEUS_INCLUDE_DIRS
-    NAMES perseus-in.h
+    NAMES perseus-sdr.h
     HINTS /usr/local/include
-    PATHS /home/sourbh/libperseus-sdr
+    PATHS libperseus-sdr
     )
 find_library(
     PERSEUS_LIBRARIES
